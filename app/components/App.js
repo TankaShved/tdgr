@@ -1,10 +1,11 @@
 import Marionette from 'backbone.marionette';
-import ItemView from './ItemView';
+import MapView from './MapView';
 
 export default Marionette.Application.extend({
-  region: '#app',
+    region: '#app',
 
-  onStart() {
-    this.showView(new ItemView());
-  }
+    onStart() {
+        this.showView(new MapView());
+    }
+
 });
