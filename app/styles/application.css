@@ -1,11 +1,12 @@
 @import '~/node_modules/leaflet/dist/leaflet.css';
+@import "~/node_modules/bootstrap/dist/css/bootstrap.min.css";
 * {
     box-sizing: border-box;
     font-family: -apple-system, system, sans-serif;
 }
 
 #content {
-    width: 480px;
+    /* width: 480px; */
     margin: 0 auto;
 }
 
@@ -37,4 +38,11 @@ html {
     min-height: 100%;
     margin: 0 auto;
     padding: 0 auto;
+}
+
+#app {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 1000;
 }

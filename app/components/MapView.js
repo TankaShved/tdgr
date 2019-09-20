@@ -20,7 +20,13 @@ export default Marionette.View.extend({
         for (let model of this.markers.models) {
             const x = model.attributes.x
             const y = model.attributes.y
-            opm.marker([x, y]).addTo(map)
+            const title = model.attributes.title
+            const discription = model.attributes.discription
+            const marker = opm.marker([x, y]).addTo(map)
+
+            var noga = "<b>" + title + "</b>" + "<br>" + discription
+            marker.bindPopup(noga).openPopup();
+
         }
     }
 });
