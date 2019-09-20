@@ -4,6 +4,9 @@ import * as opm from 'leaflet';
 export default Marionette.View.extend({
     id: 'map',
     template: _.noop,
+    initialize: function(markers) {
+        this.markers = markers
+    },
     onDomRefresh: function() {
         let map = opm.map('mymap').setView([47.24012, 39.71265], 18)
 
@@ -13,5 +16,11 @@ export default Marionette.View.extend({
             id: 'mapbox.streets',
             accessToken: 'pk.eyJ1IjoidGFua2FzaHZlZCIsImEiOiJjazBycG9yZ3cwODRuM2NueDltdWxxNTRtIn0.vwhLG6zsu9SsTy66v4gfgQ'
         }).addTo(map)
+
+        for (let model of this.markers.models) {
+            const x = model.attributes.x
+            const y = model.attributes.y
+            opm.marker([x, y]).addTo(map)
+        }
     }
 });
