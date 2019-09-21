@@ -1,5 +1,6 @@
-import Marionette from 'backbone.marionette';
-import * as opm from 'leaflet';
+import Marionette from 'backbone.marionette'
+import * as opm from 'leaflet'
+import 'leaflet-mouse-position'
 
 export default Marionette.View.extend({
     id: 'map',
@@ -10,6 +11,7 @@ export default Marionette.View.extend({
     onDomRefresh: function() {
         let map = opm.map('mymap').setView([47.24012, 39.71265], 18)
 
+        opm.control.mousePosition().addTo(map)
         opm.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
             maxZoom: 18,
