@@ -32,13 +32,13 @@ export default Marionette.View.extend({
             const marker = opm.marker([x, y], { icon: myIcon }).addTo(map)
 
             var noga = "<b>" + title + "</b>" + "<br>" + discription
-            marker.bindPopup(noga);
+            const popup = marker.bindPopup(noga);
 
-            model.on('clickedMe', function(marker) {
-                const cx = marker.attributes.x
-                const cy = marker.attributes.y
+            model.on('clickedMe', function(mrk) {
+                const cx = mrk.attributes.x
+                const cy = mrk.attributes.y
+                popup.openPopup()
                 map.setView([cx, cy], 16)
-
             }, this)
 
         }

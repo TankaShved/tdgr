@@ -7,8 +7,12 @@ export default Marionette.View.extend({
     events: {
         "click div": 'onWindowClick'
     },
+    modelEvents: {
+        'change:active': 'render'
+    },
     onWindowClick: function() {
         const currentModule = this.model
         currentModule.trigger('clickedMe', this.model)
+        currentModule.set('active', true)
     }
 });

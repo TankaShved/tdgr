@@ -63,4 +63,9 @@ html {
 
 .modal-content {
     margin: 1em 0;
+    cursor: pointer;
+}
+
+.active {
+    font-weight: bold;
 }
