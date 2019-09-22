@@ -13,13 +13,14 @@ export default Marionette.Application.extend({
             x: 47.23012,
             y: 39.71265,
             title: 'Парк ДГТУ',
-            discription: 'Студенческий парк'
+            discription: 'Студенческий парк',
+            icon: '/img/tree.png'
         })
         markers.add({
             x: 47.24012,
             y: 39.7135,
             title: 'Общежитие ДГТУ',
-            discription: 'общежитие РИСИ'
+            discription: ''
         })
         markers.add({
             x: 47.242,
