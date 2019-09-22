@@ -6,6 +6,8 @@ export default backbone.Model.extend({
         y: 39.71265,
         title: '',
         discription: '',
-        icon: ''
+        iconSettings: {
+            iconUrl: '/node_modules/leaflet/dist/images/marker-icon.png'
+        }
     }
 })

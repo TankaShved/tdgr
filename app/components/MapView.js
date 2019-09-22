@@ -4,6 +4,7 @@ import 'leaflet-mouse-position'
 import 'leaflet-draw'
 import 'leaflet.measurecontrol'
 
+
 export default Marionette.View.extend({
     id: 'map',
     template: _.noop,
@@ -11,9 +12,7 @@ export default Marionette.View.extend({
         this.markers = markers
     },
     onDomRefresh: function() {
-        let map = opm.map('mymap').setView([47.24012, 39.71265], 18)
-
-
+        let map = opm.map('mymap').setView([47.24012, 39.71265], 16)
 
         opm.control.mousePosition().addTo(map)
         opm.Control.measureControl().addTo(map)
@@ -29,13 +28,18 @@ export default Marionette.View.extend({
             const y = model.attributes.y
             const title = model.attributes.title
             const discription = model.attributes.discription
-            const myIcon = opm.icon({
-                iconUrl: model.attributes.icon
-            })
+            const myIcon = opm.icon(model.attributes.iconSettings)
             const marker = opm.marker([x, y], { icon: myIcon }).addTo(map)
 
             var noga = "<b>" + title + "</b>" + "<br>" + discription
-            marker.bindPopup(noga).openPopup();
+            marker.bindPopup(noga);
+
+            model.on('clickedMe', function(marker) {
+                const cx = marker.attributes.x
+                const cy = marker.attributes.y
+                map.setView([cx, cy], 16)
+
+            }, this)
 
         }
     }

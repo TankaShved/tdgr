@@ -10,35 +10,59 @@ export default Marionette.Application.extend({
         let markers = new MarkerCollection()
 
         markers.add({
-            x: 47.23012,
-            y: 39.71265,
+            x: 47.24005,
+            y: 39.71068,
             title: 'Парк ДГТУ',
             discription: 'Студенческий парк',
-            icon: '/img/tree.png'
+            iconSettings: {
+                iconUrl: '/images/tree.png',
+                iconSize: [26, 26],
+                popupAnchor: [0, -13]
+            }
         })
         markers.add({
-            x: 47.24012,
-            y: 39.7135,
+            x: 47.23938,
+            y: 39.71274,
             title: 'Общежитие ДГТУ',
-            discription: ''
+            discription: '',
+            iconSettings: {
+                iconUrl: '/images/bed.png',
+                iconSize: [28, 19],
+                popupAnchor: [0, -13]
+            }
         })
         markers.add({
-            x: 47.242,
-            y: 39.714,
+            x: 47.23853,
+            y: 39.71315,
             title: 'Остановка пл. Гагарина',
-            discription: '93, 23'
+            discription: '93, 23',
+            iconSettings: {
+                iconUrl: '/images/train.png',
+                iconSize: [16, 20],
+                popupAnchor: [0, -13]
+            }
         })
         markers.add({
-            x: 47.24234,
-            y: 39.7146,
+            x: 47.23721,
+            y: 39.7109,
             title: 'Остановка общежитие РИСИ',
-            discription: '1, 5, 22, 33'
+            discription: '1, 5, 22, 33',
+            iconSettings: {
+                iconUrl: '/images/P.png',
+                iconSize: [9, 12],
+                popupAnchor: [0, -13]
+            }
         })
         markers.add({
-            x: 47.24252,
-            y: 39.7141,
+            x: 47.24042,
+            y: 39.71268,
             title: 'Шашлычная',
-            discription: 'qweer'
+            discription: '',
+            iconSettings: {
+                iconUrl: '/images/food.png',
+                iconSize: [26, 19],
+                popupAnchor: [0, -13]
+            }
         })
 
 
