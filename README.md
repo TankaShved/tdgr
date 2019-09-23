@@ -12,3 +12,5 @@ This is a modern JS skeleton with MarionetteJS for [Webpack](https://webpack.git
 * Learn:
     * `public/` dir is fully auto-generated and served by HTTP server.  Write your code in `app/` dir.
     * Place static files you want to be copied from `app/assets/` and `app/styles/` to `public/`.
+    
+Demo [here](https://tankashved.github.io/TestDatum/).
