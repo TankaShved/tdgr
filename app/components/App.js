@@ -15,7 +15,7 @@ export default Marionette.Application.extend({
       title: 'Парк ДГТУ',
       discription: 'Студенческий парк',
       iconSettings: {
-        iconUrl: '/images/tree.png',
+        iconUrl: 'images/tree.png',
         iconSize: [26, 26],
         popupAnchor: [0, -13]
       }
@@ -26,7 +26,7 @@ export default Marionette.Application.extend({
       title: 'Общежитие ДГТУ',
       discription: '',
       iconSettings: {
-        iconUrl: '/images/bed.png',
+        iconUrl: 'images/bed.png',
         iconSize: [28, 19],
         popupAnchor: [0, -13]
       }
@@ -37,7 +37,7 @@ export default Marionette.Application.extend({
       title: 'Остановка пл. Гагарина',
       discription: '93, 23',
       iconSettings: {
-        iconUrl: '/images/train.png',
+        iconUrl: 'images/train.png',
         iconSize: [16, 20],
         popupAnchor: [0, -13]
       }
@@ -48,7 +48,7 @@ export default Marionette.Application.extend({
       title: 'Остановка общежитие РИСИ',
       discription: '1, 5, 22, 33',
       iconSettings: {
-        iconUrl: '/images/P.png',
+        iconUrl: 'images/P.png',
         iconSize: [9, 12],
         popupAnchor: [0, -13]
       }
@@ -59,7 +59,7 @@ export default Marionette.Application.extend({
       title: 'Шашлычная',
       discription: '',
       iconSettings: {
-        iconUrl: '/images/food.png',
+        iconUrl: 'images/food.png',
         iconSize: [26, 19],
         popupAnchor: [0, -13]
       }
