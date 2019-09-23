@@ -9,8 +9,8 @@
     },
     "scripts": {
         "start": "webpack-dev-server",
-        "prebuild": "rm -rf ./public/",
-        "build": "npm run lint && webpack -p",
+        "prebuild": "rm -rf ./public/ && mkdir public",
+        "build": "cp -r images/ public/images && npm run lint && webpack -p",
         "lint": "eslint app",
         "test": "echo test"
     },
