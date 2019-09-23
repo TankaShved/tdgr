@@ -34,7 +34,7 @@ export default Marionette.View.extend({
       var noga = '<b>' + title + '</b>' + '<br>' + discription
       const popup = marker.bindPopup(noga);
 
-      marker.on("click", function(){
+      marker.on('click', function() {
         model.set('active',true)
       })
 
