@@ -20,7 +20,7 @@ export default Marionette.View.extend({
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 18,
       id: 'mapbox.streets',
-      accessToken: 'pk.eyJ1IjoidGFua2FzaHZlZCIsImEiOiJjazBycG9yZ3cwODRuM2NueDltdWxxNTRtIn0.vwhLG6zsu9SsTy66v4gfgQ'
+      accessToken: 'pk.eyJ1IjoidGFua2FzaHZlZCIsImEiOiJja2RocGxuNWgwNWNiMnJvZW9sd3BudWVtIn0.Vz1nUFZ8o_uNGdJrXaSBCA'
     }).addTo(map)
 
     for (let model of this.markers.models) {
